@@ -2,6 +2,7 @@
 
 ##  Overview
 This project predicts the Remaining Useful Life (RUL) of machinery using an LSTM-based deep learning model trained on time-series sensor data. It is designed for predictive maintenance to estimate when a machine is likely to fail.
+GitHub Repository: https://github.com/muskan-g72/rul-lstm
 
 ---
 
@@ -54,55 +55,64 @@ We use a Long Short-Term Memory (LSTM) neural network to capture temporal depend
 - Improved performance over baseline models
 
 ---
-##  Project Structure
+## Project Structure
 
 ```text
 rul-lstm/
 │
+├── data/
 ├── images/
-│   ├── loss_curve.png
-│   ├── predicted_vs_actual.png
-│   └── rnn_vs_lstm_comparison.png
+│   ├── Training Loss Curve.png
+│   ├── Predicted vs Actual RUL.png
+│   └── RNN vs LSTM.png
 │
+├── models/
 ├── notebooks/
-│   └── rul_lstm.ipynb
+│   └── RUL_prediction_LSTM_project.ipynb
 │
 ├── src/
-│   └── rul_lstm.py
+│   ├── data_preprocessing.py
+│   ├── evaluate.py
+│   ├── model.py
+│   ├── rul_lstm.py
+│   └── train.py
 │
-├── .gitignore
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
 ```
+> The project is organized into separate modules for data preprocessing, model definition, training, and evaluation. The original end-to-end implementation is also available in `src/rul_lstm.py` and the Jupyter notebook.
 
-##  How to Run
+## How to Run
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/muskan-g72/rul-lstm.git
 cd rul-lstm
 ```
 
-### 2. Install dependencies
+### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the project
+### 3. Train the Model
 
 ```bash
 python src/train.py
 ```
 
-### 4. Explore the notebook
+### 4. Explore the Notebook
 
-Open the notebook located at:
+The complete implementation and experiments are also available in:
 
 ```text
-notebooks/rul_lstm.ipynb
+notebooks/RUL_prediction_LSTM_project.ipynb
 ```
+
+Open the notebook in Jupyter Notebook, Jupyter Lab, or Google Colab to view data preprocessing, model training, evaluation, and visualizations.
 
 ##  Visualizations
 
@@ -124,3 +134,10 @@ Shows how close the model predictions are to the true Remaining Useful Life valu
 Compares baseline RNN performance with LSTM, showing LSTM's superiority in capturing long-term dependencies.
 
 ![RNN vs LSTM Comparison](images/rnn_vs_lstm_comparison.png)
+
+---
+## Future Improvements
+- Experimentation with GRU and Transformer-based architectures
+- Real-time deployment using Flask/FastAPI
+- Model monitoring and performance tracking
+- Support for additional NASA CMAPSS datasets
