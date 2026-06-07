@@ -2,7 +2,7 @@
 
 ##  Overview
 This project predicts the Remaining Useful Life (RUL) of machinery using an LSTM-based deep learning model trained on time-series sensor data. It is designed for predictive maintenance to estimate when a machine is likely to fail.
-GitHub Repository: https://github.com/muskan-g72/rul-lstm
+> GitHub Repository: https://github.com/muskan-g72/rul-lstm
 
 ---
 
